@@ -7,7 +7,7 @@ ul.on("click", "li", function() {
 })
 
 //click on bin icon to remove
-ul.on("click", "i", function(ev) {
+ul.on("click", "span", function(ev) {
     //fadeOut: the milliseconds for the fade out +
     //the remove function happens at THE END of the Fadeout
       $(this).parent().fadeOut(500, function(){
@@ -28,7 +28,7 @@ input.keydown( function(e) {
   if(key === 13) {
     let todo = input.val();
     $(this).val("");
-    todo = "<li><i class='fas fa-eraser'></i>" + todo + "</li>";
+    todo = "<li><span><i class='far fa-trash-alt'></i></span>" + todo + "</li>";
     ul.append(todo);
   }
 }

@@ -1,0 +1,33 @@
+body {
+  background-color: lightpink;
+  text-align: center;
+}
+
+div {
+  width: 50%;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 2px;
+}
+
+i {
+  padding-right: 5px;
+}
+
+i:hover {
+  font-size: 1.5em;
+}
+
+i:hover li {
+  background-color: red;
+}

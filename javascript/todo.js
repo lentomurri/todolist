@@ -20,6 +20,8 @@ ul.on("click", "span", function(ev) {
 
 //create new to do
 let input = $("input[type='text']");
+let todoList = [];
+localStorage.setItem("todo", todoList)
 
 
 input.keydown( function(e) {
@@ -33,6 +35,8 @@ input.keydown( function(e) {
   }
 }
 );
+
+
 
 // //hover over icon to highlight which toDo is selected
 // ul.on("mouseenter", "li", function() {

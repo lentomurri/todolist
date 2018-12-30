@@ -1,34 +1,38 @@
 body {
-  background: rgb(177,172,254);
-background: linear-gradient(90deg, rgba(177,172,254,1) 22%, rgba(171,255,230,1) 51%, rgba(93,228,255,1) 91%);
+  background: rgb(177, 172, 254);
+  background: linear-gradient(90deg, rgba(177, 172, 254, 1) 22%, rgba(171, 255, 230, 1) 51%, rgba(93, 228, 255, 1) 91%);
   font-family: "Lato", sans-serif;
 }
 
-/* special classes to add in js */
-.linethrough {
-  text-decoration: line-through;
-}
-
-
-h2 {
-  -webkit-box-shadow: 0px 11px 18px -9px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 11px 18px -9px rgba(0,0,0,0.75);
-box-shadow: 0px 11px 18px -9px rgba(0,0,0,0.75);
-  padding: 10px;
-  background-color: #AD6D9B;
-  color: white;
-  font-family: "Lato", sans-serif;
-}
-
-div {
+/* general div containing app */
+.main {
   width: 500px;
   margin: 200px auto;
-  -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
   background-color: #37747F;
 }
 
+/* div top, title of the list, plus sign  */
+.top {
+  background-color: #AD6D9B;
+}
+
+h2 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+i.fa-plus-square {
+  font-size: 2em;
+  color: white;
+  padding-left: 50%
+}
+
+/* text area for input of todo list */
 input {
   width: 100%;
   height: 100%;
@@ -40,59 +44,59 @@ input {
   color: #AD6D9B;
 }
 
+::placeholder {
+  opacity: 0.5;
+}
+
 input:focus {
   border: 2px solid #AD6D9B;
   background-color: #E2F7FB;
   outline: none;
 }
 
-::placeholder {
-  opacity: 0.5;
-}
-
+/* list management */
 ul {
   list-style: none;
   padding: 0;
 }
 
+/* //styles differently every 2 list */
+li:nth-child(2n) {
+  background-color: #37747F;
+}
+
 li {
   /* avoid selection from user */
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-   user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
   text-align: left;
-  text-transform: capitalize;
+  text-transform: uppercase;
   /* make the line occupy all the space */
   line-height: 40px;
   border-top: 1px solid grey;
   font-weight: bold;
   font-size: 1.5em;
-  height: 40px;
+  min-height: 40px;
   background-color: #74985E;
 }
 
 li:hover {
-  font-size: 1.7em;
+  color: white;
 }
 
-li:hover span{
+li:hover span {
   width: 40px;
-}
-
-li:hover span{
-  width: 40px;
-}
-li:hover .fa-trash-alt{
-  font-size: 20px;
-}
-
-/* //styles differently every 2 list */
-li:nth-child(2n) {
-  background-color: #37747F;
 }
 
 span {
@@ -108,4 +112,21 @@ span {
 
 .fa-trash-alt {
   font-size: 0;
+}
+
+li:hover span {
+  width: 40px;
+}
+
+li:hover .fa-trash-alt {
+  font-size: 20px;
+}
+
+.little {
+  font-size: 1.2em;
+}
+
+/* special classes to add in js and */
+.linethrough {
+  text-decoration: line-through;
 }
